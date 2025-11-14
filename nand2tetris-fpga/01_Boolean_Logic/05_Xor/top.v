@@ -1,5 +1,5 @@
 `default_nettype none
-module top(
+module main(
 	input BUT1,
 	input BUT2,
 	output LED1,

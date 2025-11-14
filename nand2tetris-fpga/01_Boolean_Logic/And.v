@@ -10,7 +10,7 @@ module And(
 	input b,
 	output out
 );
-
-	// Put your code here:
-
+  wire w1;
+  Nand NAND(.a(a), .b(b), .out(w1));
+  Not NOT(.in(w1), .out(out));
 endmodule

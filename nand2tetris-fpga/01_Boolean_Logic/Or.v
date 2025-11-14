@@ -10,7 +10,15 @@ module Or(
 	input b,
 	output out
 );
+  wire nota;
+  Not NOT1(.in(a), .out(nota));
 
-	// Put your code here:
+  wire notb;
+  Not NOT2(.in(b), .out(notb));
+
+  wire notab;
+  And AND(.a(nota), .b(notb), .out(notab));
+
+  Not NOT3(.in(notab), .out(out));
 
 endmodule
